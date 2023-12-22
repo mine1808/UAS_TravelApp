@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.PendingTravelFragment"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="24dp"
+    android:background="@color/kawaii">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masih Tertunda..."
+        android:textSize="32sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_marginVertical="16dp"
+        android:textColor="@color/huntergreen"/>
+
+    <TextView
+        android:id="@+id/txt_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_rounded"
+        android:backgroundTint="@color/vinrouge"
+        android:padding="12dp"
+        android:text="Tidak ada aksi yang tertunda"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins"
+        android:layout_marginVertical="16dp"
+        android:textColor="@color/kawaii"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/pending_action_card" />
+
+</LinearLayout>

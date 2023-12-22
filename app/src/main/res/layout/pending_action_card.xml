@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="2dp"
+    android:layout_marginVertical="4dp"
+    android:paddingVertical="8dp"
+    android:paddingHorizontal="16dp"
+    android:background="@drawable/card_rounded"
+    android:backgroundTint="@color/huntergreen">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bla bla bla"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/kawaii"/>
+
+    <TextView
+        android:id="@+id/txt_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:text="Description"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/kawaii"/>
+
+    <TextView
+        android:id="@+id/txt_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:background="@color/vinrouge"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:text="CREATE"
+        android:textColor="@color/timberwolf"
+        android:layout_gravity="end" />
+
+</LinearLayout>

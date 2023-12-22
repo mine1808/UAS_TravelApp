@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeFragment"
+        android:icon="@drawable/baseline_directions_railway_filled_24"
+        android:title="Beranda" />
+    <item android:id="@+id/favouriteFragment"
+        android:icon="@drawable/baseline_star_24"
+        android:title="Favorit" />
+    <item android:id="@+id/orderHistoryFragment"
+        android:icon="@drawable/ic_history"
+        android:title="Riwayat" />
+    <item android:id="@+id/profileFragment"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:title="Profil" />
+</menu>

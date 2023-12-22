@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ManageTravelActivity"
+    android:padding="24dp"
+    android:background="@color/huntergreen">
+
+    <TextView
+        android:id="@+id/txt_add_plan_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kelola Travel"
+        android:textSize="32sp"
+        android:fontFamily="@font/poppins_semibold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/kawaii"/>
+
+    <EditText
+        android:id="@+id/edit_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Judul Perjalanan A - Z"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="20sp"
+        android:textColorHint="@color/kawaii"
+        app:layout_constraintTop_toBottomOf="@id/txt_add_plan_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/txt_asal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Asal"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/edit_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/kawaii"/>
+
+    <EditText
+        android:id="@+id/edit_asal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txt_asal"
+        android:padding="8dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="16sp"
+        android:hint="Asal stasiun"
+        android:textColor="@color/kawaii"/>
+
+    <TextView
+        android:id="@+id/txt_tujuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tujuan"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/edit_asal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/kawaii"/>
+
+    <EditText
+        android:id="@+id/edit_tujuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txt_tujuan"
+        android:padding="8dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="16sp"
+        android:hint="Tujuan stasiun"
+        android:textColor="@color/kawaii"/>
+
+    <TextView
+        android:id="@+id/txt_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kelas Kereta"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/edit_tujuan"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/kawaii"/>
+
+    <LinearLayout
+        android:id="@+id/lin_class_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txt_class"
+        android:orientation="horizontal"
+        android:background="@color/finn">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Harga Ekonomi"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="16sp"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_class"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_weight="2"
+            android:textColor="@color/kawaii"/>
+
+        <EditText
+            android:id="@+id/edit_harga_ekonomi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:fontFamily="@font/poppins"
+            android:textSize="16sp"
+            android:hint="8.000"
+            android:inputType="numberSigned"
+            android:layout_weight="3"
+            android:textAlignment="textEnd"
+            android:textColorHint="@color/kawaii"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lin_class_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lin_class_1"
+        android:orientation="horizontal"
+        android:background="@color/timberwolf">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Harga Bisnis"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="16sp"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_class"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_weight="2"
+            android:textColor="@color/huntergreen"/>
+
+        <EditText
+            android:id="@+id/edit_harga_bisnis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:fontFamily="@font/poppins"
+            android:textSize="16sp"
+            android:hint="20.000"
+            android:inputType="numberSigned"
+            android:layout_weight="3"
+            android:textAlignment="textEnd"
+            android:textColorHint="@color/huntergreen"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lin_class_2"
+        android:orientation="horizontal"
+        android:background="@color/finn">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Harga Eksekutif"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="16sp"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_class"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_weight="2"
+            android:textColor="@color/kawaii"/>
+
+        <EditText
+            android:id="@+id/edit_harga_eksekutif"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:fontFamily="@font/poppins"
+            android:textSize="16sp"
+            android:hint="32.000"
+            android:inputType="numberSigned"
+            android:layout_weight="3"
+            android:textAlignment="textEnd"
+            android:textColorHint="@color/kawaii"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:backgroundTint="@color/kawaii"
+            android:textColor="@color/huntergreen"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:backgroundTint="@color/topazz"
+            android:textColor="@color/white"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

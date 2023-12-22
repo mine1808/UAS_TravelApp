@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="2dp"
+    android:layout_marginTop="8dp"
+    android:paddingVertical="8dp"
+    android:paddingHorizontal="16dp"
+    android:background="@drawable/card_rounded"
+    android:backgroundTint="@color/huntergreen">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bla bla bla"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/kawaii"/>
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 Januari 2024"
+        android:textSize="18sp"
+        android:textColor="@color/kawaii"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_gravity="end" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:background="@color/vinrouge">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Destinasi"
+            android:textSize="16sp"
+            android:textColor="@color/kawaii"
+            android:fontFamily="@font/poppins_semibold" />
+
+        <TextView
+            android:id="@+id/txt_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text=": x"
+            android:textSize="16sp"
+            android:textColor="@color/kawaii"
+            android:fontFamily="@font/poppins_semibold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:background="@color/timberwolf">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Paket"
+            android:textSize="16sp"
+            android:textColor="@color/huntergreen"
+            android:fontFamily="@font/poppins_semibold"/>
+
+        <TextView
+            android:id="@+id/txt_paket"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text=": z"
+            android:textSize="16sp"
+            android:textColor="@color/huntergreen"
+            android:fontFamily="@font/poppins_semibold" />
+    </LinearLayout>
+
+</LinearLayout>

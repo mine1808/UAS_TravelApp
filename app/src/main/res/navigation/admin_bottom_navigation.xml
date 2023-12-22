@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:startDestination="@id/homeAdminFragment2">
+
+    <fragment
+        android:id="@+id/homeAdminFragment2"
+        android:name="com.example.uas_travelapp.Fragment.HomeAdminFragment"
+        android:label="fragment_home_admin"
+        tools:layout="@layout/fragment_home_admin" >
+        <action
+            android:id="@+id/action_homeAdminFragment2_to_manageTravelActivity"
+            app:destination="@id/manageTravelActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/manageTravelActivity"
+        android:name="com.example.uas_travelapp.Activity.ManageTravelActivity"
+        android:label="activity_manage_travel"
+        tools:layout="@layout/activity_manage_travel" >
+        <argument
+            android:name="travel_id"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+    </activity>
+    <fragment
+        android:id="@+id/manageUserFragment2"
+        android:name="com.example.uas_travelapp.Fragment.ManageUserFragment"
+        android:label="fragment_manage_user"
+        tools:layout="@layout/fragment_manage_user" />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.example.uas_travelapp.Fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/pendingTravelFragment2"
+        android:name="com.example.uas_travelapp.Fragment.PendingTravelFragment"
+        android:label="fragment_pending_travel"
+        tools:layout="@layout/fragment_pending_travel" />
+
+
+</navigation>

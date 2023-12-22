@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.OrderActivity"
+    android:padding="24dp"
+    android:background="@color/huntergreen">
+
+    <TextView
+        android:id="@+id/txt_add_plan_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rencana Perjalanan"
+        android:textSize="32sp"
+        android:fontFamily="@font/poppins_semibold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/kawaii"/>
+
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Perjalanan A - Z"
+        android:fontFamily="@font/poppins"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/txt_add_plan_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/kawaii"/>
+
+    <TextView
+        android:id="@+id/txt_asal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Asal"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/txt_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/kawaii"/>
+
+    <TextView
+        android:id="@+id/txt_asal_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txt_asal"
+        android:padding="8dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="16sp"
+        android:text="Asal stasiun"
+        android:textColor="@color/kawaii"/>
+
+    <TextView
+        android:id="@+id/txt_tujuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tujuan"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/txt_asal_value"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/kawaii"/>
+
+    <TextView
+        android:id="@+id/txt_tujuan_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txt_tujuan"
+        android:padding="8dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="16sp"
+        android:text="Tujuan stasiun"
+        android:textColor="@color/kawaii"/>
+
+    <TextView
+        android:id="@+id/txt_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kelas Kereta"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/txt_tujuan_value"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/kawaii"/>
+
+    <Spinner
+        android:id="@+id/spinner_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txt_class"
+        android:padding="8dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="16sp"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/txt_tgl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Perjalanan"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/spinner_class"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/kawaii"/>
+
+    <Button
+        android:id="@+id/btn_show_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txt_tgl"
+        android:text="Pilih tanggal perjalanan"
+        android:layout_marginTop="4dp"
+        android:textAlignment="textStart"
+        android:backgroundTint="@color/vinrouge"/>
+
+    <TextView
+        android:id="@+id/txt_additional"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Paket Tambahan"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/btn_show_calendar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/kawaii"/>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txt_additional"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/toggleGroupPaket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/txt_additional">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Makan siang"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/kawaii"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Duduk pinggir jendela"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/kawaii"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Duduk bagian depan"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/kawaii"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asuransi"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/kawaii"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bantal &amp; selimut"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/kawaii"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TV &amp; film"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/kawaii"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/txt_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Harga:"
+        android:textSize="24sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/kawaii"
+        app:layout_constraintBottom_toTopOf="@id/btn_order"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginVertical="16dp" />
+
+    <TextView
+        android:id="@+id/txt_harga"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Rp200.000"
+        android:textSize="24sp"
+        android:textAlignment="textEnd"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/kawaii"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txt_total"
+        app:layout_constraintBottom_toTopOf="@id/btn_order"
+        android:layout_marginVertical="16dp"
+        android:layout_marginStart="8dp"/>
+
+    <Button
+        android:id="@+id/btn_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pesan"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="20sp"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/finn"
+        android:textColor="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

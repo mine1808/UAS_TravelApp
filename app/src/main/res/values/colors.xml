@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="huntergreen">#161616</color>
+    <color name="timberwolf">#D9CECE</color>
+    <color name="kawaii">#F0BFC9</color>
+    <color name="vinrouge">#994C68</color>
+    <color name="finn">#742A4C</color>
+    <color name="topazz">#79768E</color>
 </resources>

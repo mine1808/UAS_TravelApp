@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/homeUserFragment2">
+
+    <fragment
+        android:id="@+id/homeUserFragment2"
+        android:name="com.example.uas_travelapp.Fragment.HomeUserFragment"
+        android:label="fragment_home_user"
+        tools:layout="@layout/fragment_home_user" >
+        <action
+            android:id="@+id/action_homeUserFragment2_to_orderActivity"
+            app:destination="@id/orderActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/orderActivity"
+        android:name="com.example.uas_travelapp.Activity.OrderActivity"
+        android:label="activity_order"
+        tools:layout="@layout/activity_order" >
+        <argument
+        android:name="id_travel"
+        app:argType="string"
+        app:nullable="false" />
+    </activity>
+    <fragment
+        android:id="@+id/orderHistoryFragment2"
+        android:name="com.example.uas_travelapp.Fragment.OrderHistoryFragment"
+        android:label="fragment_order_history"
+        tools:layout="@layout/fragment_order_history" >
+        <action
+            android:id="@+id/action_orderHistoryFragment2_to_orderActivity"
+            app:destination="@id/orderActivity" />
+        <action
+            android:id="@+id/action_orderHistoryFragment2_to_homeUserFragment2"
+            app:destination="@id/homeUserFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment3"
+        android:name="com.example.uas_travelapp.Fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.uas_travelapp.Fragment.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_orderActivity"
+            app:destination="@id/orderActivity" />
+        <argument
+            android:name="id_travel"
+            app:argType="string"
+            app:nullable="false"/>
+        <argument
+            android:name="title"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="asal"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="tujuan"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="hargaEkonomi"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="hargaBisnis"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="hargaEksekutif"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
